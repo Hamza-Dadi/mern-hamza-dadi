@@ -96,8 +96,9 @@ Le serveur sera accessible sur : **http://localhost:3000**
 
 ## 🌐 Déploiement
 
+- **Frontend Cloudflare** : [https://mern-hamza-dadi.hamzadadi118.workers.dev/](https://mern-hamza-dadi.hamzadadi118.workers.dev/)
 - **Frontend Vercel** : [https://mern-hamza-dadi-frontend.vercel.app/](https://mern-hamza-dadi-frontend.vercel.app/)
-- **Backend Vercel** : [https://mern-hamza-dadi-backend.vercel.app/api/health](https://mern-hamza-dadi-backend.vercel.app/api/health)
+- **Backend Vercel (API & MongoDB)** : [https://mern-hamza-dadi-backend.vercel.app/api/health](https://mern-hamza-dadi-backend.vercel.app/api/health)
 - **Backend Railway** : `https://<votre-domaine-railway>.up.railway.app/api/health`
 
 ---
