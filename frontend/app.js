@@ -3,10 +3,10 @@
 
 // Configuration centralisée des backends
 const API_CONFIG = {
-    // Backend Principal : Railway (ou localhost:3000 en dev)
+    // Backend Principal : Cloudflare (remplace Railway)
     PRIMARY_URL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
         ? 'http://localhost:3000'
-        : 'https://mern-hamza-dadi-production.up.railway.app',
+        : 'https://mern-hamza-dadi.hamzadadi118.workers.dev',
 
     // Backend de Secours : Vercel
     BACKUP_URL: (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
