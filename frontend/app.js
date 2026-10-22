@@ -84,7 +84,7 @@ function updateBackendBadge(name, state = 'normal') {
  */
 async function fetchWithFailover(endpoint, options = {}) {
     const targets = [
-        { name: 'Railway (Principal)', baseUrl: API_CONFIG.PRIMARY_URL },
+        { name: 'Cloudflare (Principal)', baseUrl: API_CONFIG.PRIMARY_URL },
         { name: 'Vercel (Secours)', baseUrl: API_CONFIG.BACKUP_URL }
     ];
 
