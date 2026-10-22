@@ -37,6 +37,8 @@ mern-hamza-dadi/
 │   ├── style.css           # Feuille de style responsive moderne
 │   ├── config.js           # Configuration centralisée des backends
 │   └── app.js              # Logique client, basculement automatique et gestion d'erreurs
+├── vercel.json             # Configuration de déploiement et routage Vercel
+├── cloudflare.json         # Configuration de déploiement Cloudflare
 ├── .gitignore              # Exclusion des fichiers sensibles et dépendances
 └── README.md               # Documentation complète du projet
 ```

@@ -1,0 +1,17 @@
+{
+  "name": "mern-hamza-dadi-backend",
+  "compatibility_date": "2026-10-22",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "routes": [
+    {
+      "pattern": "/api/*"
+    }
+  ],
+  "env": {
+    "production": {
+      "name": "mern-hamza-dadi-backend"
+    }
+  }
+}
