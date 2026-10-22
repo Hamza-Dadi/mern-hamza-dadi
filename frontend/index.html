@@ -7,12 +7,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Application MERN — Hamza Dadi</h1>
-    </header>
-    <main id="app">
-        <p>Chargement de l'application...</p>
-    </main>
+    <div class="container">
+        <!-- En-tête -->
+        <header class="header">
+            <div>
+                <h1>📦 Application MERN — Gestion des Éléments</h1>
+                <p class="subtitle">Examen Pratique — Hamza Dadi</p>
+            </div>
+            <div class="status-group">
+                <div class="server-status" id="serverStatus">
+                    <span class="status-dot checking"></span>
+                    <span class="status-text" id="statusText">Vérification de l'API...</span>
+                </div>
+                <div class="backend-badge" id="backendBadge">
+                    ⚡ Backend : <span id="activeBackendText">Principal</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Alertes / Erreurs de requête -->
+        <div id="errorBanner" class="alert alert-error" style="display: none;"></div>
+        <div id="successBanner" class="alert alert-success" style="display: none;"></div>
+
+        <!-- Formulaire vide pour ajouter un élément (Question 4.1) -->
+        <section class="card form-card">
+            <h2>➕ Ajouter un élément</h2>
+            <form id="itemForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemName">Nom de l'élément *</label>
+                        <input type="text" id="itemName" placeholder="Entrez le nom de l'élément" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDesc">Description</label>
+                        <input type="text" id="itemDesc" placeholder="Entrez une description (optionnel)">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="btnSubmit">
+                        Ajouter l'élément
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Liste des éléments lus en base -->
+        <section class="card list-card">
+            <div class="list-header">
+                <h2>📋 Liste des éléments (<span id="itemsCount">0</span>)</h2>
+                <button class="btn btn-secondary" id="btnRefresh" type="button">🔄 Actualiser</button>
+            </div>
+
+            <div id="loadingIndicator" class="loading">Chargement des données...</div>
+
+            <div class="table-responsive">
+                <table id="itemsTable">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Description</th>
+                            <th>Date d'ajout</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemsBody">
+                        <!-- Rempli dynamiquement en JavaScript via fetch -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage" class="empty-state" style="display: none;">
+                Aucun élément enregistré. Utilisez le formulaire ci-dessus pour en ajouter un.
+            </p>
+        </section>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
